@@ -1,6 +1,7 @@
 ﻿--FinalPeriodSpecialTopic3.sql
 --檔案編碼格式：UTF-8檔首有BOM
 --EEIT107 江慶庭組別 期末專題
+--資料庫：Microsoft SQL Server 2017
 --食譜功能
 --作者：郭翔宇
 
