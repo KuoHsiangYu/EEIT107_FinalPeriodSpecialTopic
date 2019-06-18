@@ -1,4 +1,5 @@
-﻿--FinalPeriodSpecialTopic3.sql
+﻿--FinalPeriodSpecialTopic4.sql
+--結訓專題建立資料庫表格SQL程式碼
 --檔案編碼格式：UTF-8檔首有BOM
 --EEIT107 江慶庭組別 期末專題
 --資料庫：Microsoft SQL Server 2017
