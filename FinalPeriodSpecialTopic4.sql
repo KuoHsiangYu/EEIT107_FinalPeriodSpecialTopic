@@ -47,11 +47,21 @@ CREATE TABLE unit_recipe
 )
 GO
 
+--粉絲跟著做
 CREATE TABLE follow_make
 (
 	fk_recipe_id INT NOT NULL,              --食譜編號
 	fans_member_id INT NOT NULL UNIQUE KEY, --粉絲帳號
 	fans_food_image VARBINARY(MAX) NOT NULL --粉絲上傳食物照片
+	FOREIGN KEY(fk_recipe_id) references recipe(pk_recipe_id) --指定 FK
+)
+GO
+
+--食材
+CREATE TABLE ingredients
+(
+	fk_recipe_id INT NOT NULL,  --食譜編號
+	food NVARCHAR(50) NOT NULL, --食材內容
 	FOREIGN KEY(fk_recipe_id) references recipe(pk_recipe_id) --指定 FK
 )
 GO
