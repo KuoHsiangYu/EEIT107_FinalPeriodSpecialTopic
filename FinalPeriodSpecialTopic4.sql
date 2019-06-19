@@ -29,7 +29,6 @@ CREATE TABLE recipe
 	recipe_name NVARCHAR(50) NOT NULL,          --食譜名稱
 	recipe_quantity NVARCHAR(50) NOT NULL,      --食譜份量
 	recipe_image VARBINARY(MAX) NOT NULL,       --食譜圖片
-	recipe_list NVARCHAR(100) NOT NULL,         --食材
 	recipe_summary NVARCHAR(100) NOT NULL,      --食譜簡介
 	recipe_time NVARCHAR(30) NOT NULL,          --烹調時間
 	recipe_note NVARCHAR(100),                  --小撇步介紹
