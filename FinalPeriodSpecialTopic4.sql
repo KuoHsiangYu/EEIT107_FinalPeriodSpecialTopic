@@ -12,13 +12,19 @@
 --USE DB03;
 --GO
 
-CREATE DATABASE f_project;
+--CREATE DATABASE f_project;
+--GO
+
+--USE f_project;
+--GO
+
+CREATE DATABASE icook;
 GO
 
-USE f_project;
+USE icook;
 GO
 
---會員資料 tbale
+--會員資料 table
 CREATE TABLE member_inf
 (
 	member_id INT IDENTITY(1,1) PRIMARY KEY, --會員編號
