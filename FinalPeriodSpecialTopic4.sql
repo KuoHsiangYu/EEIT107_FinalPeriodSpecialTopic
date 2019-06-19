@@ -33,8 +33,6 @@ CREATE TABLE recipe
 	recipe_summary NVARCHAR(100) NOT NULL,      --食譜簡介
 	recipe_time NVARCHAR(30) NOT NULL,          --烹調時間
 	recipe_note NVARCHAR(100),                  --小撇步介紹
-	fans_id INT,                                --粉絲跟著做(粉絲帳號id)
-	fans_image VARBINARY(MAX),                  --粉絲跟著做(粉絲食物圖片)
 )
 GO
 
@@ -45,6 +43,15 @@ CREATE TABLE unit_recipe
 	recipe_step_id INT NOT NULL,               --食譜步驟編號
 	recipe_step_explain NVARCHAR(50) NOT NULL, --食譜步驟說明
 	recipe_step_image VARBINARY(MAX) NOT NULL, --食譜步驟圖片
+	FOREIGN KEY(fk_recipe_id) references recipe(pk_recipe_id) --指定 FK
+)
+GO
+
+CREATE TABLE follow_make
+(
+	fk_recipe_id INT NOT NULL,              --食譜編號
+	fans_member_id INT NOT NULL UNIQUE KEY, --粉絲帳號
+	fans_food_image VARBINARY(MAX) NOT NULL --粉絲上傳食物照片
 	FOREIGN KEY(fk_recipe_id) references recipe(pk_recipe_id) --指定 FK
 )
 GO
